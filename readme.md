@@ -16,7 +16,7 @@ The example code in /inc/customizer.php will create a new Panel in the Customize
 
 This theme is a modified version of the default TwentyTwelve theme. The following changes have been made:
 
-- Added customizer code and sameple functions into `functions.php` (starting from line 631)  
+- Added customizer code and sample functions into `functions.php` (starting from line 631)  
 - Added our sample social icons into `header.php`  
 - Added our sample Tiny MCE content into `footer.php`  
 - Added files to /inc folder which contains code for adding Customizer Panels, Sections, Settings & Controls. Also includes code for Custom Controls.  
