@@ -980,6 +980,91 @@ class skyrocket_initialise_customizer_settings {
 			)
 		) );
 
+		// Test of Pill Checkbox Custom Control
+		$wp_customize->add_setting( 'sample_pill_checkbox',
+			array(
+				'default' => $this->defaults['sample_pill_checkbox'],
+				'transport' => 'refresh',
+				'sanitize_callback' => 'skyrocket_text_sanitization'
+			)
+		);
+		$wp_customize->add_control( new Skyrocket_Pill_Checkbox_Custom_Control( $wp_customize, 'sample_pill_checkbox',
+			array(
+				'label' => __( 'Pill Checkbox Control', 'skyrocket' ),
+				'description' => esc_html__( 'This is a sample Pill Checkbox Control', 'skyrocket' ),
+				'section' => 'sample_custom_controls_section',
+				'input_attrs' => array(
+					'sortable' => false,
+					'fullwidth' => false,
+				),
+				'choices' => array(
+					'tiger' => __( 'Tiger', 'skyrocket' ),
+					'lion' => __( 'Lion', 'skyrocket' ),
+					'giraffe' => __( 'Giraffe', 'skyrocket'  ),
+					'elephant' => __( 'Elephant', 'skyrocket'  ),
+					'hippo' => __( 'Hippo', 'skyrocket'  ),
+					'rhino' => __( 'Rhino', 'skyrocket'  ),
+				)
+			)
+		) );
+
+		// Test of Pill Checkbox Custom Control
+		$wp_customize->add_setting( 'sample_pill_checkbox2',
+			array(
+				'default' => $this->defaults['sample_pill_checkbox2'],
+				'transport' => 'refresh',
+				'sanitize_callback' => 'skyrocket_text_sanitization'
+			)
+		);
+		$wp_customize->add_control( new Skyrocket_Pill_Checkbox_Custom_Control( $wp_customize, 'sample_pill_checkbox2',
+			array(
+				'label' => __( 'Pill Checkbox Control', 'skyrocket' ),
+				'description' => esc_html__( 'This is a sample Sortable Pill Checkbox Control', 'skyrocket' ),
+				'section' => 'sample_custom_controls_section',
+				'input_attrs' => array(
+					'sortable' => true,
+					'fullwidth' => false,
+				),
+				'choices' => array(
+					'captainamerica' => __( 'Captain America', 'skyrocket' ),
+					'ironman' => __( 'Iron Man', 'skyrocket' ),
+					'captainmarvel' => __( 'Captain Marvel', 'skyrocket'  ),
+					'msmarvel' => __( 'Ms. Marvel', 'skyrocket'  ),
+					'Jessicajones' => __( 'Jessica Jones', 'skyrocket'  ),
+					'squirrelgirl' => __( 'Squirrel Girl', 'skyrocket'  ),
+					'blackwidow' => __( 'Black Widow', 'skyrocket'  ),
+					'hulk' => __( 'Hulk', 'skyrocket'  ),
+				)
+			)
+		) );
+
+		// Test of Pill Checkbox Custom Control
+		$wp_customize->add_setting( 'sample_pill_checkbox3',
+			array(
+				'default' => $this->defaults['sample_pill_checkbox3'],
+				'transport' => 'refresh',
+				'sanitize_callback' => 'skyrocket_text_sanitization'
+			)
+		);
+		$wp_customize->add_control( new Skyrocket_Pill_Checkbox_Custom_Control( $wp_customize, 'sample_pill_checkbox3',
+			array(
+				'label' => __( 'Pill Checkbox Control', 'skyrocket' ),
+				'description' => esc_html__( 'This is a sample Sortable Fullwidth Pill Checkbox Control', 'skyrocket' ),
+				'section' => 'sample_custom_controls_section',
+				'input_attrs' => array(
+					'sortable' => true,
+					'fullwidth' => true,
+				),
+				'choices' => array(
+					'date' => __( 'Date', 'skyrocket' ),
+					'author' => __( 'Author', 'skyrocket' ),
+					'categories' => __( 'Categories', 'skyrocket'  ),
+					'tags' => __( 'Tags', 'skyrocket'  ),
+					'comments' => __( 'Comments', 'skyrocket'  ),
+				)
+			)
+		) );
+
 		// Test of Simple Notice control
 		$wp_customize->add_setting( 'sample_simple_notice',
 			array(

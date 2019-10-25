@@ -49,6 +49,9 @@ get_header(); ?>
 				echo '<strong>sample_alpha_color</strong> = ' . get_theme_mod( 'sample_alpha_color' ) . '</br>';
 				echo '<strong>sample_wpcolorpicker_alpha_color</strong> = ' . get_theme_mod( 'sample_wpcolorpicker_alpha_color' ) . '</br>';
 				echo '<strong>sample_wpcolorpicker_alpha_color2</strong> = ' . get_theme_mod( 'sample_wpcolorpicker_alpha_color2' ) . '</br>';
+				echo '<strong>sample_pill_checkbox</strong> = ' . get_theme_mod( 'sample_pill_checkbox' ) . '</br>';
+				echo '<strong>sample_pill_checkbox2</strong> = ' . get_theme_mod( 'sample_pill_checkbox2' ) . '</br>';
+				echo '<strong>sample_pill_checkbox3</strong> = ' . get_theme_mod( 'sample_pill_checkbox3' ) . '</br>';
 				echo '<strong>sample_dropdown_select2_control_single</strong> = ' . get_theme_mod( 'sample_dropdown_select2_control_single' ) . '</br>';
 				echo '<strong>sample_dropdown_select2_control_multi</strong> = ' . get_theme_mod( 'sample_dropdown_select2_control_multi' ) . '</br>';
 				echo '<strong>sample_dropdown_posts_control</strong> = ' . get_theme_mod( 'sample_dropdown_posts_control' ) . '</br>';
