@@ -4,7 +4,7 @@
 **Author URI:** https://maddisondesigns.com  
 **License:** GNU General Public License v2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Version:** 1.0.0
+**Version:** 1.0.2
 
 ## Description ##
 
@@ -38,5 +38,11 @@ For more details, check out my Customizer Developers Guide:
 
 ## Changelog ##
 
-= 1.0 =
+= 1.0.2 =
+- Fixed issue with Sortable Pill Checkbox Custom Control
+
+= 1.0.1 =
+- Added new Sortable Pill Checkbox Custom Control
+
+= 1.0.0 =
 - Initial release.
