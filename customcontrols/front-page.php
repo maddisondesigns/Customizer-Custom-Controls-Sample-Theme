@@ -54,6 +54,7 @@ get_header(); ?>
 				echo '<strong>sample_pill_checkbox3</strong> = ' . get_theme_mod( 'sample_pill_checkbox3' ) . '</br>';
 				echo '<strong>sample_dropdown_select2_control_single</strong> = ' . get_theme_mod( 'sample_dropdown_select2_control_single' ) . '</br>';
 				echo '<strong>sample_dropdown_select2_control_multi</strong> = ' . get_theme_mod( 'sample_dropdown_select2_control_multi' ) . '</br>';
+				echo '<strong>sample_dropdown_select2_control_multi2</strong> = ' . get_theme_mod( 'sample_dropdown_select2_control_multi2' ) . '</br>';
 				echo '<strong>sample_dropdown_posts_control</strong> = ' . get_theme_mod( 'sample_dropdown_posts_control' ) . '</br>';
 				echo '<strong>sample_tinymce_editor</strong> = ' . wpautop( get_theme_mod( 'sample_tinymce_editor' ) ) . '</br>';
 				echo '<strong>sample_google_font_select</strong> = ' . get_theme_mod( 'sample_google_font_select' ) . '</br>';
