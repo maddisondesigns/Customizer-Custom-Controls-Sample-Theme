@@ -37,7 +37,7 @@ get_header(); ?>
 				echo '<h2>Customizer Settings</h2>';
 				echo '<p>To see examples of how to use your controls in your theme, have a look at the <code>front-page.php</code> template.</p>';
 				echo '<p>These are the settings currently saved in the <strong>Sample Custom Controls</strong> and <strong>Default Controls</strong> Customizer Sections.</p>';
-				echo '<h2>Sample Custom Controls</h2>';
+				echo '<h2>Sample Custom Controls Section</h2>';
 				echo '<p>';
 				echo '<strong>sample_toggle_switch</strong> = ' . get_theme_mod( 'sample_toggle_switch' ) . '</br>';
 				echo '<strong>sample_slider_control</strong> = ' . get_theme_mod( 'sample_slider_control' ) . '</br>';
@@ -60,7 +60,7 @@ get_header(); ?>
 				echo '<strong>sample_google_font_select</strong> = ' . get_theme_mod( 'sample_google_font_select' ) . '</br>';
 				echo '</p>';
 
-				echo '<h2>Default Controls</h2>';
+				echo '<h2>Default Controls Section</h2>';
 				echo '<p>';
 				echo '<strong>sample_default_text</strong> = ' . get_theme_mod( 'sample_default_text' ) . '</br>';
 				echo '<strong>sample_email_text</strong> = ' . get_theme_mod( 'sample_email_text' ) . '</br>';

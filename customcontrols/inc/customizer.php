@@ -242,6 +242,26 @@ class skyrocket_initialise_customizer_settings {
 	 * Register our H1 Heading controls
 	 */
 	public function skyrocket_register_h1_heading_controls( $wp_customize ) {
+		// Add our slider Control for getting the H1 Heading Font Size selection
+		$wp_customize->add_setting( 'sample_h1_heading_font_size',
+			array(
+				'default' => $this->defaults['sample_h1_heading_font_size'],
+				'transport' => 'refresh',
+				'sanitize_callback' => 'skyrocket_range_sanitization'
+			)
+		);
+		$wp_customize->add_control( new Skyrocket_Slider_Custom_Control( $wp_customize, 'sample_h1_heading_font_size',
+			array(
+				'label' => __( 'Font Size (px)', 'skyrocket' ),
+				'section' => 'h1_heading_section',
+				'input_attrs' => array(
+					'min' => 16,
+					'max' => 90,
+					'step' => 1,
+				),
+			)
+		) );
+
  		// Add our Select Control for getting the H1 Heading Style selection
 		$wp_customize->add_setting( 'sample_h1_heading_style',
 			array(
@@ -324,7 +344,7 @@ class skyrocket_initialise_customizer_settings {
 			)
 		) );
 
-		// Add our Select Control for getting the H1 Heading Line Height selection
+		// Add our Slider Control for getting the H1 Heading Line Height selection
 		$wp_customize->add_setting( 'sample_h1_heading_letter_spacing',
 			array(
 				'default' => $this->defaults['sample_h1_heading_letter_spacing'],
@@ -352,7 +372,7 @@ class skyrocket_initialise_customizer_settings {
 				'sanitize_callback' => 'skyrocket_hex_rgba_sanitization',
 			)
 		);
-		$wp_customize->add_control( new Skyrocket_Customize_Alpha_Color_Control( $wp_customize, 'sample_h1_heading_color_normal',
+		$wp_customize->add_control( new Skyrocket_Alpha_Color_Control( $wp_customize, 'sample_h1_heading_color_normal',
 			array(
 				'label' => __( 'H1 Header Color', 'ephemeris' ),
 				'section' => 'h1_heading_section',
@@ -367,7 +387,7 @@ class skyrocket_initialise_customizer_settings {
 				'sanitize_callback' => 'skyrocket_hex_rgba_sanitization',
 			)
 		);
-		$wp_customize->add_control( new Skyrocket_Customize_Alpha_Color_Control( $wp_customize, 'sample_h1_heading_color_link',
+		$wp_customize->add_control( new Skyrocket_Alpha_Color_Control( $wp_customize, 'sample_h1_heading_color_link',
 			array(
 				'label' => __( 'H1 Header Link Color', 'ephemeris' ),
 				'section' => 'h1_heading_section',
@@ -382,7 +402,7 @@ class skyrocket_initialise_customizer_settings {
 				'sanitize_callback' => 'skyrocket_hex_rgba_sanitization',
 			)
 		);
-		$wp_customize->add_control( new Skyrocket_Customize_Alpha_Color_Control( $wp_customize, 'sample_h1_heading_color_hover',
+		$wp_customize->add_control( new Skyrocket_Alpha_Color_Control( $wp_customize, 'sample_h1_heading_color_hover',
 			array(
 				'label' => __( 'H1 Header Link Hover Color', 'ephemeris' ),
 				'section' => 'h1_heading_section',
@@ -397,7 +417,7 @@ class skyrocket_initialise_customizer_settings {
 				'sanitize_callback' => 'skyrocket_hex_rgba_sanitization',
 			)
 		);
-		$wp_customize->add_control( new Skyrocket_Customize_Alpha_Color_Control( $wp_customize, 'sample_h1_heading_color_visited',
+		$wp_customize->add_control( new Skyrocket_Alpha_Color_Control( $wp_customize, 'sample_h1_heading_color_visited',
 			array(
 				'label' => __( 'H1 Header Link Visited Color', 'ephemeris' ),
 				'section' => 'h1_heading_section',

@@ -861,11 +861,44 @@ function skyrocket_customizer_css_styles() {
 	$bodyFont = json_decode( get_theme_mod( 'sample_body_text_font', $defaults['sample_body_text_font'] ), true );
 	$headerFont = json_decode( get_theme_mod( 'sample_heading_font', $defaults['sample_heading_font'] ), true );
 
-	// Body Header color styles
-	$styles .= "h1, h2, h3, h4, h5, h6 { font-family: '" . $headerFont['font'] . "'," . $headerFont["category"] . "}";
+
+	// General Header styles
+	$styles .= "h1, h2, h3, h4, h5, h6 {";
+	$styles .= "font-family:'" . $headerFont['font'] . "'," . $headerFont["category"] . ";";
+	$styles .= "font-weight:" . ( $headerFont["regularweight"] == "regular" ? "normal" : $headerFont["regularweight"] ) . ";";
+	$styles .= "}";
+
+	// Header 1 specific styles
+	$styles .= "h1, .entry-content h1 {";
+	$styles .= "font-size:" . get_theme_mod( 'sample_h1_heading_font_size', $defaults["sample_h1_heading_font_size"] ) . "px;";
+	$styles .= "font-style:" . ( get_theme_mod( 'sample_h1_heading_style', $defaults["sample_h1_heading_style"] ) == " italic" ? $headerFont["italicweight"] : get_theme_mod( 'sample_h1_heading_style', $defaults["sample_h1_heading_style"] ) ) . ";";
+	$styles .= "font-weight:" . ( get_theme_mod( 'sample_h1_heading_weight', $defaults["sample_h1_heading_weight"] ) == " bold" ? $headerFont["boldweight"] : get_theme_mod( 'sample_h1_heading_weight', $defaults["sample_h1_heading_weight"] ) ) . ";";
+	$styles .= "text-transform:" . get_theme_mod( 'sample_h1_heading_text_transform', $defaults["sample_h1_heading_text_transform"] ) . ";";
+	$styles .= "line-height:" . get_theme_mod( 'sample_h1_heading_line_height', $defaults["sample_h1_heading_line_height"] ) . ";";
+	$styles .= "letter-spacing:" . get_theme_mod( 'sample_h1_heading_letter_spacing', $defaults["sample_h1_heading_letter_spacing"] ) . "px;";
+	$styles .= "color:" . get_theme_mod( 'sample_h1_heading_color_normal', $defaults["sample_h1_heading_color_normal"] ) . ";";
+	$styles .= "}";
+	$styles .= ".entry-content h1 a {";
+	$styles .= "color:" . get_theme_mod( 'sample_h1_heading_color_link', $defaults["sample_h1_heading_color_link"] ) . ";";
+	$styles .= "}";
+	$styles .= ".entry-content h1 a:visited {";
+	$styles .= "color:" . get_theme_mod( 'sample_h1_heading_color_visited', $defaults["sample_h1_heading_color_visited"] ) . ";";
+	$styles .= "}";
+	$styles .= ".entry-content h1 a:hover {";
+	$styles .= "color:" . get_theme_mod( 'sample_h1_heading_color_hover', $defaults["sample_h1_heading_color_hover"] ) . ";";
+	$styles .= "}";
 
 	// Body Text color styles
-	$styles .= "body p { font-family: '" . $bodyFont['font'] . "'," . $bodyFont["category"] . "}";
+	$styles .= "body p {";
+	$styles .= "font-family:'" . $bodyFont['font'] . "'," . $bodyFont["category"] . ";";
+	$styles .= "font-weight:" . ( $bodyFont["regularweight"] == "regular" ? "normal" : $bodyFont["regularweight"] ) . ";";
+	$styles .= "}";
+	$styles .= "em {";
+	$styles .= "font-style:" . $bodyFont['italicweight'] . ";";
+	$styles .= "}";
+	$styles .= "b,strong {";
+	$styles .= "font-weight:" . $bodyFont['boldweight'] . ";";
+	$styles .= "}";
 
 	echo '<style type="text/css">' . $styles . '</style>';
 }
@@ -951,6 +984,7 @@ if ( ! function_exists( 'skyrocket_generate_defaults' ) ) {
 					'category' => 'sans-serif'
 				)
 			),
+			'sample_h1_heading_font_size' => 36,
 			'sample_h1_heading_style' => 'normal',
 			'sample_h1_heading_weight' => 'bold',
 			'sample_h1_heading_text_transform' => 'capitalize',
