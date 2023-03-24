@@ -369,6 +369,32 @@ jQuery( document ).ready(function($) {
 	});
 
 	/**
+	 * WP ColorPicker Alpha Color Picker Control
+	 *
+	 * @author Anthony Hortin <http://maddisondesigns.com>
+	 * @license http://www.gnu.org/licenses/gpl-2.0.html
+	 * @link https://github.com/maddisondesigns
+	 */
+
+	// Manually initialise the wpColorPicker controls so we can add the color picker palette
+	$('.wpcolorpicker-alpha-color-picker').each(function( i, obj ) {
+		var colorPickerInput = $(this);
+		var paletteColors = _wpCustomizeSettings.controls[$(this).attr('id')].colorpickerpalette;
+		var options = {
+			palettes: paletteColors,
+			change: function(event, ui) {
+				// Set 1 ms timeout so input field is changed before change event is triggered
+				// See: https://github.com/Automattic/Iris/issues/55#issuecomment-303716820
+				setTimeout(function(){
+					// Important! Make sure to trigger change event so Customizer knows it has to save the field
+					colorPickerInput.trigger('change');
+				},1);
+			}
+		};
+		$(obj).wpColorPicker(options);
+	} );
+
+	/**
  	 * Alpha Color Picker Custom Control
  	 *
  	 * @author Braad Martin <http://braadmartin.com>

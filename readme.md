@@ -4,7 +4,7 @@
 **Author URI:** https://maddisondesigns.com  
 **License:** GNU General Public License v2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Version:** 1.1.1
+**Version:** 1.1.2
 
 ## Description ##
 
@@ -21,7 +21,7 @@ The example code in /inc/customizer.php will:
 
 This theme is a modified version of the default TwentyTwelve theme. The following changes have been made:
 
-- Added customizer code and sample functions into `functions.php` (starting from line 631)  
+- Added customizer code and sample functions into `functions.php` (starting from line 631). Also includes an example of using the `skyrocket_social_icons_list` filter for adding extra icons to the social icons list  
 - Added our sample social icons into `header.php`  
 - Added our sample Tiny MCE content into `footer.php`  
 - Added files to /inc folder which contains code for adding Customizer Panels, Sections, Settings & Controls. Also includes code for Custom Controls.  
@@ -29,9 +29,10 @@ This theme is a modified version of the default TwentyTwelve theme. The followin
 - Added files to /css for styling our Customizer controls and for Font Awesome usage  
 - Added /images folder which contains sample images used by several controls and an image used by the Skyrocket_Customize_Alpha_Color_Control Control  
 - Added /fonts folder which contains the Font Awesome fonts. These are used to show some icons in our sample Single Accordion Control and also to show our social icons  
-- Added example code to `front-page.php` template for outputting the datta from our Sample Controls and Default Controls.  
+- Added example code to `front-page.php` template for outputting the data from our Sample Controls and Default Controls.  
 - Customizer Typography settings will control the main body text, & headings within the theme.  
 - Customizer Header & Navigation settings add the social icons & contact information in the theme header and the search icon will be appended to the main menu.  
+- If the WooCommerce plugin is active a **WooCommerce Layout** Panel will be created with some example controls.  
 
 The `front-page.php` template has been modified so that it outputs all the values for our Sample Controls Section and Default Controls Section. This will show you examples of the type of data you can expect from each control. These values will dispay at the bottom of the homepage and are purely for providing examples of how to output each control.
 
@@ -44,6 +45,9 @@ For more details, check out my Customizer Developers Guide:
 [The WordPress Customizer – A Developers Guide (Part 2)](https://maddisondesigns.com/2017/05/the-wordpress-customizer-a-developers-guide-part-2)
 
 ## Changelog ##
+
+= 1.1.2 =
+- Updated theme with latest version of Customizer code (1.2.1)
 
 = 1.1.1 =
 - Updated theme with latest version of Customizer code (1.1.8)

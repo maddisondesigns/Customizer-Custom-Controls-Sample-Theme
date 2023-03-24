@@ -82,6 +82,24 @@ get_header(); ?>
 				echo '<strong>sample_date_time_no_past_date</strong> = ' . get_theme_mod( 'sample_date_time_no_past_date' ) . '</br>';
 				echo '</p>';
 
+				echo '<h2>Typography Section</h2>';
+				echo '<p>';
+				echo '<h4>Body Text Panel</h4>';
+				echo '<strong>sample_body_text_font</strong> = ' . get_theme_mod( 'sample_body_text_font' ) . '</br>';
+				echo '<h4>All Headings Panel</h4>';
+				echo '<strong>sample_heading_font</strong> = ' . get_theme_mod( 'sample_heading_font' ) . '</br>';
+				echo '<h4>Headings (H1) Panel</h4>';
+				echo '<strong>sample_h1_heading_font_size</strong> = ' . get_theme_mod( 'sample_h1_heading_font_size' ) . '</br>';
+				echo '<strong>sample_h1_heading_style</strong> = ' . get_theme_mod( 'sample_h1_heading_style' ) . '</br>';
+				echo '<strong>sample_h1_heading_weight</strong> = ' . get_theme_mod( 'sample_h1_heading_weight' ) . '</br>';
+				echo '<strong>sample_h1_heading_text_transform</strong> = ' . get_theme_mod( 'sample_h1_heading_text_transform' ) . '</br>';
+				echo '<strong>sample_h1_heading_line_height</strong> = ' . get_theme_mod( 'sample_h1_heading_line_height' ) . '</br>';
+				echo '<strong>sample_h1_heading_letter_spacing</strong> = ' . get_theme_mod( 'sample_h1_heading_letter_spacing' ) . '</br>';
+				echo '<strong>sample_h1_heading_color_normal</strong> = ' . get_theme_mod( 'sample_h1_heading_color_normal' ) . '</br>';
+				echo '<strong>sample_h1_heading_color_link</strong> = ' . get_theme_mod( 'sample_h1_heading_color_link' ) . '</br>';
+				echo '<strong>sample_h1_heading_color_hover</strong> = ' . get_theme_mod( 'sample_h1_heading_color_hover' ) . '</br>';
+				echo '<strong>sample_h1_heading_color_visited</strong> = ' . get_theme_mod( 'sample_h1_heading_color_visited' ) . '</br>';
+
 				echo '</div>'; 
 			?>
 				

@@ -678,6 +678,7 @@ function skyrocket_is_woocommerce_active() {
 /**
  * Filter our social icons to add an email icon on the end
  * This is a sample function to test the skyrocket_social_icons_list filter.
+ * It shows an example of how you can add extra icons or elements to the Social Icons list using the skyrocket_social_icons_list filter.
  */
 function skyrocket_add_email_to_social_icons( $social_list ) {
 	$social_list[] = sprintf( '<li class="%1$s"><a href="%2$s" title="%3$s"><i class="%4$s"></i><span class="assistive-text">%3$s</span></a></li>',
@@ -1001,6 +1002,9 @@ if ( ! function_exists( 'skyrocket_generate_defaults' ) ) {
 }
 
 /**
-* Load all our Customizer options
-*/
-include_once trailingslashit( dirname(__FILE__) ) . 'inc/customizer.php';
+ * Load all our Customizer options
+ */
+function skyrocket_customizer_setup() {
+	include_once trailingslashit( dirname(__FILE__) ) . 'inc/customizer.php';
+}
+add_action( 'after_setup_theme', 'skyrocket_customizer_setup' );

@@ -692,7 +692,7 @@ class skyrocket_initialise_customizer_settings {
 				'sanitize_callback' => 'skyrocket_text_sanitization'
 			)
 		);
-		$wp_customize->add_control( new Skyrocket_Simple_Notice_Custom_control( $wp_customize, 'woocommerce_other_sidebar',
+		$wp_customize->add_control( new Skyrocket_Simple_Notice_Custom_Control( $wp_customize, 'woocommerce_other_sidebar',
 			array(
 				'label' => __( 'Cart, Checkout & My Account sidebars', 'skyrocket' ),
 				'description' => esc_html__( 'The Cart, Checkout and My Account pages are displayed using shortcodes. To remove the sidebar from these Pages, simply edit each Page and change the Template (in the Page Attributes Panel) to Full-width Page.', 'skyrocket' ),
@@ -959,13 +959,13 @@ class skyrocket_initialise_customizer_settings {
 				'input_attrs' => array(
 					'palette' => array(
 						'#000000',
+						'#222222',
+						'#444444',
+						'#777777',
+						'#999999',
+						'#aaaaaa',
+						'#dddddd',
 						'#ffffff',
-						'#dd3333',
-						'#dd9933',
-						'#eeee22',
-						'#81d742',
-						'#1e73be',
-						'#8224e3',
 					)
 				),
 			)
