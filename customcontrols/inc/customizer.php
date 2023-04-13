@@ -344,7 +344,7 @@ class skyrocket_initialise_customizer_settings {
 			)
 		) );
 
-		// Add our Slider Control for getting the H1 Heading Line Height selection
+		// Add our Slider Control for getting the H1 Heading Letter Spacing selection
 		$wp_customize->add_setting( 'sample_h1_heading_letter_spacing',
 			array(
 				'default' => $this->defaults['sample_h1_heading_letter_spacing'],
