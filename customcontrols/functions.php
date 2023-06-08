@@ -642,8 +642,8 @@ add_filter( 'widget_tag_cloud_args', 'twentytwelve_widget_tag_cloud_args' );
 if ( ! function_exists( 'skyrocket_scripts_styles' ) ) {
 	function skyrocket_scripts_styles() {
 		// Register and enqueue our icon font
-		// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-		wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome-all.min.css' , array(), '5.8.2', 'all' );
+		// We're using the awesome Font Awesome icon font. https://fontawesome.com
+		wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome-all.min.css' , array(), '6.4.0', 'all' );
 		wp_enqueue_style( 'fontawesome' );
 	}
 }
