@@ -48,7 +48,9 @@ For more details, check out my Customizer Developers Guide:
 
 = 1.2.0 =
 - Updated theme with latest version of Customizer code (1.3.0) which includes new Divider Control
-- Update Font Awesome to v6.4.0
+- Updated Font Awesome to v6.4.0
+- Added 500px, Artstation, Figma, Mastodon (works with mastodon.social & mastodon.art), Quora, Steam, Telegram, TikTok, Unity, Unsplash & WhatsApp social icons
+- Added skyrocket_social_icons_plurality filter to change the plurality of the social icons (e.g. Use it to change 'Follow me on...', to 'Follow CompanyName on...')
 
 = 1.1.3 =
 - Updated theme with latest version of Customizer code (1.2.2)
