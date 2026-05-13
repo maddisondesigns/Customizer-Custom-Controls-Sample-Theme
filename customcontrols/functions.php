@@ -884,12 +884,12 @@ function skyrocket_customizer_css_styles() {
 
 	// Header 1 specific styles
 	$styles .= "h1, .entry-content h1 {";
-	$styles .= "font-size:" . get_theme_mod( 'sample_h1_heading_font_size', $defaults["sample_h1_heading_font_size"] ) . "px;";
+	$styles .= "font-size:" . get_theme_mod( 'sample_h1_heading_font_size', $defaults["sample_h1_heading_font_size"] );
 	$styles .= "font-style:" . ( get_theme_mod( 'sample_h1_heading_style', $defaults["sample_h1_heading_style"] ) == " italic" ? $headerFont["italicweight"] : get_theme_mod( 'sample_h1_heading_style', $defaults["sample_h1_heading_style"] ) ) . ";";
 	$styles .= "font-weight:" . ( get_theme_mod( 'sample_h1_heading_weight', $defaults["sample_h1_heading_weight"] ) == " bold" ? $headerFont["boldweight"] : get_theme_mod( 'sample_h1_heading_weight', $defaults["sample_h1_heading_weight"] ) ) . ";";
 	$styles .= "text-transform:" . get_theme_mod( 'sample_h1_heading_text_transform', $defaults["sample_h1_heading_text_transform"] ) . ";";
 	$styles .= "line-height:" . get_theme_mod( 'sample_h1_heading_line_height', $defaults["sample_h1_heading_line_height"] ) . ";";
-	$styles .= "letter-spacing:" . get_theme_mod( 'sample_h1_heading_letter_spacing', $defaults["sample_h1_heading_letter_spacing"] ) . "px;";
+	$styles .= "letter-spacing:" . get_theme_mod( 'sample_h1_heading_letter_spacing', $defaults["sample_h1_heading_letter_spacing"] ) . ";";
 	$styles .= "color:" . get_theme_mod( 'sample_h1_heading_color_normal', $defaults["sample_h1_heading_color_normal"] ) . ";";
 	$styles .= "}";
 	$styles .= ".entry-content h1 a {";
@@ -906,6 +906,7 @@ function skyrocket_customizer_css_styles() {
 	$styles .= "body p {";
 	$styles .= "font-family:'" . $bodyFont['font'] . "'," . $bodyFont["category"] . ";";
 	$styles .= "font-weight:" . ( $bodyFont["regularweight"] == "regular" ? "normal" : $bodyFont["regularweight"] ) . ";";
+	$styles .= "font-size:" . get_theme_mod( 'sample_body_font_size', $defaults["sample_body_font_size"] );
 	$styles .= "}";
 	$styles .= "em {";
 	$styles .= "font-style:" . $bodyFont['italicweight'] . ";";
@@ -936,6 +937,7 @@ if ( ! function_exists( 'skyrocket_generate_defaults' ) ) {
 			'sample_toggle_switch' => 0,
 			'sample_slider_control' => 48,
 			'sample_slider_control_small_step' => 2,
+			'sample_slider_control_with_units' => '24px',
 			'sample_sortable_repeater_control' => '',
 			'sample_image_radio_button' => 'sidebarright',
 			'sample_text_radio_button' => 'right',
@@ -1001,12 +1003,13 @@ if ( ! function_exists( 'skyrocket_generate_defaults' ) ) {
 					'category' => 'sans-serif'
 				)
 			),
-			'sample_h1_heading_font_size' => 36,
+			'sample_body_font_size' => '16px',
+			'sample_h1_heading_font_size' => "36px",
 			'sample_h1_heading_style' => 'normal',
 			'sample_h1_heading_weight' => 'bold',
 			'sample_h1_heading_text_transform' => 'capitalize',
 			'sample_h1_heading_line_height' => 1.5,
-			'sample_h1_heading_letter_spacing' => 0,
+			'sample_h1_heading_letter_spacing' => "0px",
 			'sample_h1_heading_color_normal' => '#333',
 			'sample_h1_heading_color_link' => '#234634',
 			'sample_h1_heading_color_hover' => '#763562',

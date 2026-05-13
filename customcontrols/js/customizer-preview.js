@@ -14,9 +14,17 @@ jQuery( document ).ready(function($) {
    });
 
 	// Change the font-size of the h1
+	wp.customize('sample_h1_heading_font_size', function(control) {
+		control.bind(function( controlValue ) {
+			$('h1').css('font-size', controlValue);
+			
+		});
+	});
+
+	// Change the font-size of the h1
 	wp.customize('sample_slider_control', function(control) {
 		control.bind(function( controlValue ) {
-			$('h1').css('font-size', controlValue + 'px');
+			$('#sample_slider_control').text(controlValue + 'px');
 		});
 	});
 });

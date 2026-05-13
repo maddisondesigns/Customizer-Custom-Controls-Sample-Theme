@@ -40,8 +40,9 @@ get_header(); ?>
 				echo '<h2>Sample Custom Controls Section</h2>';
 				echo '<p>';
 				echo '<strong>sample_toggle_switch</strong> = ' . get_theme_mod( 'sample_toggle_switch' ) . '</br>';
-				echo '<strong>sample_slider_control</strong> = ' . get_theme_mod( 'sample_slider_control' ) . '</br>';
+				echo '<strong>sample_slider_control</strong> = <span id="sample_slider_control">' . get_theme_mod( 'sample_slider_control' ) . '</span></br>';
 				echo '<strong>sample_slider_control_small_step</strong> = ' . get_theme_mod( 'sample_slider_control_small_step' ) . '</br>';
+				echo '<strong>sample_slider_control_with_units</strong> = ' . get_theme_mod( 'sample_slider_control_with_units' ) . '</br>';
 				echo '<strong>sample_sortable_repeater_control</strong> = ' . get_theme_mod( 'sample_sortable_repeater_control' ) . '</br>';
 				echo '<strong>sample_image_radio_button</strong> = ' . get_theme_mod( 'sample_image_radio_button' ) . '</br>';
 				echo '<strong>sample_image_radio_button</strong> = ' . get_theme_mod( 'sample_image_radio_button' ) . '</br>';

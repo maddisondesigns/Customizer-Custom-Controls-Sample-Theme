@@ -213,6 +213,33 @@ class skyrocket_initialise_customizer_settings {
 				),
 			)
 		) );
+
+		// Add our slider Control for getting the H1 Heading Font Size selection
+		$wp_customize->add_setting( 'sample_body_font_size',
+			array(
+				'default' => $this->defaults['sample_body_font_size'],
+				'transport' => 'refresh',
+				'sanitize_callback' => 'skyrocket_range_sanitization'
+			)
+		);
+		$wp_customize->add_control( new Skyrocket_Slider_Custom_Control( $wp_customize, 'sample_body_font_size',
+			array(
+				'label' => __( 'Font Size', 'skyrocket' ),
+				'section' => 'body_text_section',
+				'input_attrs' => array(
+					'min' => 10,
+					'max' => 60,
+					'step' => 1,
+					'default_unit' => 'px', // Optional. Default unit to use
+					'units' => array( // Optional. List of units available for selection
+						'px' => ( 'px' ),
+						'em' => ( 'em' ),
+						'rem' => ( 'rem' ),
+						'vw' => ( 'vw' ),
+					),
+				),
+			)
+		) );
 	}
 
 	/**
@@ -246,18 +273,25 @@ class skyrocket_initialise_customizer_settings {
 		$wp_customize->add_setting( 'sample_h1_heading_font_size',
 			array(
 				'default' => $this->defaults['sample_h1_heading_font_size'],
-				'transport' => 'refresh',
+				'transport' => 'postMessage',
 				'sanitize_callback' => 'skyrocket_range_sanitization'
 			)
 		);
 		$wp_customize->add_control( new Skyrocket_Slider_Custom_Control( $wp_customize, 'sample_h1_heading_font_size',
 			array(
-				'label' => __( 'Font Size (px)', 'skyrocket' ),
+				'label' => __( 'Font Size', 'skyrocket' ),
 				'section' => 'h1_heading_section',
 				'input_attrs' => array(
 					'min' => 16,
 					'max' => 90,
 					'step' => 1,
+					'default_unit' => 'px', // Optional. Default unit to use
+					'units' => array( // Optional. List of units available for selection
+						'px' => ( 'px' ),
+						'em' => ( 'em' ),
+						'rem' => ( 'rem' ),
+						'vw' => ( 'vw' ),
+					),
 				),
 			)
 		) );
@@ -354,12 +388,19 @@ class skyrocket_initialise_customizer_settings {
 		);
 		$wp_customize->add_control( new Skyrocket_Slider_Custom_Control( $wp_customize, 'sample_h1_heading_letter_spacing',
 			array(
-				'label' => __( 'Letter Spacing (px)', 'skyrocket' ),
+				'label' => __( 'Letter Spacing', 'skyrocket' ),
 				'section' => 'h1_heading_section',
 				'input_attrs' => array(
 					'min' => 0,
 					'max' => 4,
 					'step' => .1,
+					'default_unit' => 'px', // Optional. Default unit to use
+					'units' => array( // Optional. List of units available for selection
+						'px' => ( 'px' ),
+						'em' => ( 'em' ),
+						'rem' => ( 'rem' ),
+						'vw' => ( 'vw' ),
+					),
 				),
 			)
 		) );
@@ -768,6 +809,33 @@ class skyrocket_initialise_customizer_settings {
 					'min' => 0,
 					'max' => 4,
 					'step' => .5,
+				),
+			)
+		) );
+
+		// Yet another Test of Slider Custom Control
+		$wp_customize->add_setting( 'sample_slider_control_with_units',
+			array(
+				'default' => $this->defaults['sample_slider_control_with_units'],
+				'transport' => 'refresh',
+				'sanitize_callback' => 'skyrocket_range_sanitization'
+			)
+		);
+		$wp_customize->add_control( new Skyrocket_Slider_Custom_Control( $wp_customize, 'sample_slider_control_with_units',
+			array(
+				'label' => __( 'Slider Control With Units', 'skyrocket' ),
+				'section' => 'sample_custom_controls_section',
+				'input_attrs' => array(
+					'min' => 10,
+					'max' => 80,
+					'step' => 1,
+					'default_unit' => 'rem', // Optional. Default unit to use
+					'units' => array( // Optional. List of units available for selection
+						'px' => ( 'px' ),
+						'em' => ( 'em' ),
+						'rem' => ( 'rem' ),
+						'vw' => ( 'vw' ),
+					),
 				),
 			)
 		) );
