@@ -46,6 +46,9 @@ For more details, check out my Customizer Developers Guide:
 
 ## Changelog ##
 
+= 1.2.3 =
+- Updated theme with latest version of Customizer code (1.3.3)
+
 = 1.2.2 =
 - Updated theme with latest version of Customizer code which updates Slider Custom Control to allow specifying units (1.3.2)
 
